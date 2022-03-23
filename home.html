@@ -4,33 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css">
     <title>Password Vault</title>
+    <link rel="stylesheet" href="/src/style.css">
 </head>
-<body>
+<body onload="getEntries()">
+    
+    <table id="entry-table">
+    </table>
 
-    <div class="container">
-        <h1>Password Vault</h1>
+    <div class="container index-container">
+        <h1>Add Entry</h1>
         <form method="post">
             <div class="login">
+                <label for="username">Website</label>
+                <input placeholder="Enter website" value="" id="site">
                 <label for="username">Username</label>
-                <input placeholder="Enter Username" value="" id="username">
+                <input type="username" placeholder="Enter Username" value="" id="username">
                 <label for="password">Password</label>
                 <input type="password" placeholder="Enter Password" value="" id="password">
             </div>
 
             <div class="btns">
-                <div class="row">
-                    <a href="#" type="submit" onclick="onLogin()" class="login-btn btn">Login</a>
-                </div>
-                <div class="row">
-                    <a href="/signup.html" class="login-btn outline-btn btn">Sign Up</a>
-                </div>
+                <a href="index.html" id="addEntry" class="login-btn btn">Add Entry</a>
 
             </div>
         </form>         
     </div>
-    
     <script src="main.js"></script>
 </body>
 </html>

@@ -36,7 +36,7 @@ function onLogin(){
     
     if(loginUsername === localStorage.getItem("login-username") && 
     loginPassword === localStorage.getItem("login-password")){
-        window.location.href = "index.html"
+        window.location.href = "home.html"
     } else{
         alert("Incorrect Username or Password!")
     }
@@ -52,7 +52,7 @@ signUp = () =>{
     if(loginPassword === loginConPass && loginUsername && loginPassword){
         localStorage.setItem("login-username", loginUsername)
         localStorage.setItem("login-password", loginPassword)
-        window.location.href = "login.html"
+        window.location.href = "index.html"
     } else if(!loginUsername || !loginPassword){
         alert("Username or Password cannot be empty!")
     } else if(loginConPass !== loginPassword){
