@@ -15,7 +15,7 @@ html{
 body{
     min-height: 100vh;
     /* overflow-y: hidden; */
-    background: url('/src/img/bg.jpg') no-repeat center center;
+    background: url('/src/img/bg.jpg') no-repeat center center, #000;
     background-size: cover;
 }
 
