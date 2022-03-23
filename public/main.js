@@ -27,6 +27,23 @@ function intialize(){
         
         getEntries()
     })
+
+    document.getElementById('signUp').addEventListener('click', signUp = (event) =>{
+        event.preventDefault()
+        const loginUsername = document.getElementById("username").value
+        const loginPassword = document.getElementById("password").value;
+        const loginConPass = document.getElementById("conPass").value;
+        
+        if(loginPassword === loginConPass && loginUsername && loginPassword){
+            localStorage.setItem("login-username", loginUsername)
+            localStorage.setItem("login-password", loginPassword)
+            window.location.href = "index.html"
+        } else if(!loginUsername || !loginPassword){
+            alert("Username or Password cannot be empty!")
+        } else if(loginConPass !== loginPassword){
+            alert("Passwords do not match!")
+        }  
+    })
 }
 
 
@@ -39,24 +56,6 @@ function onLogin(){
         window.location.href = "home.html"
     } else{
         alert("Incorrect Username or Password!")
-    }
-    
-}
-
-
-signUp = () =>{
-    const loginUsername = document.getElementById("username").value
-    const loginPassword = document.getElementById("password").value;
-    const loginConPass = document.getElementById("conPass").value;
-    
-    if(loginPassword === loginConPass && loginUsername && loginPassword){
-        localStorage.setItem("login-username", loginUsername)
-        localStorage.setItem("login-password", loginPassword)
-        window.location.href = "index.html"
-    } else if(!loginUsername || !loginPassword){
-        alert("Username or Password cannot be empty!")
-    } else if(loginConPass !== loginPassword){
-        alert("Passwords do not match!")
     }
     
 }
