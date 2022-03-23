@@ -11,7 +11,7 @@
 
     <div class="container">
         <h1>Password Vault</h1>
-        <form>
+        <form method="post">
             <div class="login">
                 <label for="username">Username</label>
                 <input placeholder="Enter Username" value="" id="username">
@@ -21,7 +21,7 @@
 
             <div class="btns">
                 <div class="row">
-                    <a href="#" onclick="onLogin()" class="login-btn btn">Login</a>
+                    <a href="#" type="submit" onclick="onLogin()" class="login-btn btn">Login</a>
                 </div>
                 <div class="row">
                     <a href="/signup.html" class="login-btn outline-btn btn">Sign Up</a>
